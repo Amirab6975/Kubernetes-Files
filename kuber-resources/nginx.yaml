@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec: 
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+      livenessProbe:
+        httpGet:
+          path: /jhoh
+          port: 80
+        initialDelaySeconds: 15
+      ports:
+        - containerPort: 80

@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  namespace: aboli
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - http:
+      paths:
+      - path: /aboli
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-nodeport
+            port:
+              number: 8080
+

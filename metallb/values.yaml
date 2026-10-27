@@ -1,0 +1,10 @@
+controller:
+  resources:
+    requests:
+      cpu: 500m
+      memory: 500Mi
+speaker:
+  resources:
+    requests:
+      cpu: 500m
+      memory: 500Mi
